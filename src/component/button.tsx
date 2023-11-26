@@ -18,7 +18,7 @@ function Button({answerList, btnType, miscClass, correctAnswer, points}: Props){
     const answers = answerList.map((item: any) => <button 
     key={item} 
     className={btnClasses}
-    onClick={() => {setSelectedAnswer(item); answerCheck(); setSelectedAnswer(item); answerCheck();}}
+    onClick={() => {setSelectedAnswer(item); answerCheck();}}
     >{item}</button>)
     const answerResponse = () => selectedAnswer === "" ? <p></p> :  selectedAnswer === correctAnswer ? <p className='text-success'>True!</p> : <p className='text-danger'>False!</p>;
     const conLog = () => console.log(points + " " + selectedAnswer + "|" + correctAnswer);
