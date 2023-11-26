@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import Quiz from './Quizes';
 
 interface Props {
@@ -7,13 +7,14 @@ interface Props {
     miscClass: string;
     correctAnswer: any;
     points : number;
+    setPoints : Dispatch<SetStateAction<number>>
 }
 
 
-function Button({answerList, btnType, miscClass, correctAnswer, points}: Props){
+function Button({answerList, btnType, miscClass, correctAnswer, points, setPoints}: Props){
     let btnClasses = btnType + " " + miscClass
     const [selectedAnswer, setSelectedAnswer] = useState("");
-    const answerCheck = (answer : string) => {selectedAnswer === "" ? points = 0 : selectedAnswer === correctAnswer ? points = points + 1 : selectedAnswer !== correctAnswer ? points = points - 1 : 0};
+    const answerCheck = (answer : string) => {answer === "" ? setPoints(0) : answer === correctAnswer ? setPoints(points + 1) : answer !== correctAnswer ? setPoints(points - 1) : 0};
 
     const answers = answerList.map((item: any) => <button 
     key={item} 

@@ -36,6 +36,7 @@ export default App
 */
 
 //import ListGroup from './component/ListGroup';
+import { useState } from "react";
 import Alert from "./component/alert";
 import Button from "./component/button";
 import Quizes from "./component/Quizes";
@@ -58,7 +59,7 @@ function App(){
     <ListGroup items={items} heading='Continents' onSelectItem={handleSelectItem} />
         </>
 */
-  let points= 0;
+  const [points, setPoints] = useState(0);
 
   const question = "Intruder Alert! A RED spy is in The base!"
   const question2 = "Protect the briefcase!";
@@ -89,7 +90,8 @@ function App(){
        btnType={btnTypes} 
        miscClass={miscClasses} 
        correctAnswer={correctAnswer}
-       points={points}></Button>
+       points={points}
+       setPoints={setPoints}></Button>
       <b>HUT HUT HUT HUT HUT!</b><br />
       <b>Protect the briefcase!</b><br />
       <Button 
@@ -97,7 +99,8 @@ function App(){
       btnType={btnTypes}
       miscClass={miscClasses}
       correctAnswer={correctAnswer2}
-      points={points}></Button>
+      points={points}
+      setPoints={setPoints}></Button>
     </Alert>
 
     <Alert>
@@ -107,7 +110,8 @@ function App(){
         questionMaster={questionMaster} 
         answerListMaster={answerListMaster} 
         correctAnswerMaster={correctAnswerMaster} 
-        points={points} ></Quizes>
+        points={points} 
+        setPoints={setPoints}></Quizes>
     </Alert>
 
         </>
