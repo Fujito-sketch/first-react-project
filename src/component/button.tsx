@@ -6,11 +6,11 @@ interface Props {
     btnType: string;
     miscClass: string;
     correctAnswer: any;
+    points : number;
 }
 
-let points = 0;
 
-function Button({answerList, btnType, miscClass, correctAnswer}: Props){
+function Button({answerList, btnType, miscClass, correctAnswer, points}: Props){
     let btnClasses = btnType + " " + miscClass
     const [selectedAnswer, setSelectedAnswer] = useState("");
     const answerCheck = () => {selectedAnswer === "" ? points = 0 : selectedAnswer === correctAnswer ? points = points + 1 : selectedAnswer !== correctAnswer ? points = points - 1 : 0};

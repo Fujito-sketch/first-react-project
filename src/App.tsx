@@ -88,14 +88,16 @@ function App(){
        answerList={answerList} 
        btnType={btnTypes} 
        miscClass={miscClasses} 
-       correctAnswer={correctAnswer}></Button>
+       correctAnswer={correctAnswer}
+       points={points}></Button>
       <b>HUT HUT HUT HUT HUT!</b><br />
       <b>Protect the briefcase!</b><br />
       <Button 
       answerList={answerList2}
       btnType={btnTypes}
       miscClass={miscClasses}
-      correctAnswer={correctAnswer2}></Button>
+      correctAnswer={correctAnswer2}
+      points={points}></Button>
     </Alert>
 
     <Alert>
@@ -104,7 +106,8 @@ function App(){
         miscClasses={miscClasses} 
         questionMaster={questionMaster} 
         answerListMaster={answerListMaster} 
-        correctAnswerMaster={correctAnswerMaster} ></Quizes>
+        correctAnswerMaster={correctAnswerMaster} 
+        points={points} ></Quizes>
     </Alert>
 
         </>
