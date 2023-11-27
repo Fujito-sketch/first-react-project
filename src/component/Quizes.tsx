@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
 import Button from "./button"
-import SubmitButton from "./SubmitButton"
 
 interface Props {
     questionMaster : string[];
