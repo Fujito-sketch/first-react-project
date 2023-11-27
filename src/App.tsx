@@ -80,29 +80,8 @@ function App(){
   let correctAnswerMaster = [correctAnswer, correctAnswer2, correctAnswer3];
 
   let alertText = "Intruder Alert!";
+
   return <>
-
-    <Alert>
-      <b>Intruder Alert!</b><br />
-      <b>A RED spy</b> is in <b>The base!</b><br />
-      <Button
-       answerList={answerList} 
-       btnType={btnTypes} 
-       miscClass={miscClasses} 
-       correctAnswer={correctAnswer}
-       points={points}
-       setPoints={setPoints}></Button>
-      <b>HUT HUT HUT HUT HUT!</b><br />
-      <b>Protect the briefcase!</b><br />
-      <Button 
-      answerList={answerList2}
-      btnType={btnTypes}
-      miscClass={miscClasses}
-      correctAnswer={correctAnswer2}
-      points={points}
-      setPoints={setPoints}></Button>
-    </Alert>
-
     <Alert>
       <Quizes 
         btnTypes={btnTypes} 
@@ -113,7 +92,6 @@ function App(){
         points={points} 
         setPoints={setPoints}></Quizes>
     </Alert>
-
         </>
 }
 

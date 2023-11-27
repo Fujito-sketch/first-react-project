@@ -12,6 +12,7 @@ interface Props {
 }
 
 function Quizes({questionMaster, answerListMaster, btnTypes, miscClasses, correctAnswerMaster, points, setPoints} : Props){
+
     const Quiz = () => {
         let quizList = [];
         for(let i = 0; i < questionMaster.length && answerListMaster.length && correctAnswerMaster.length; i++){
@@ -21,13 +22,15 @@ function Quizes({questionMaster, answerListMaster, btnTypes, miscClasses, correc
             quizList.push(<><b key={i + 10}>{questions}</b> <br /> 
             <Button key={i} btnType={btnTypes} miscClass={miscClasses}
             correctAnswer={correctAnswers} answerList={answers} points={points} setPoints={setPoints}></Button></>) 
-    }
+        }
     return quizList;
-}
+    }
+    const showPoints = () => {console.log(points)}
 
     return (
         <>
             {Quiz()}
+            <button className="btn btn-primary" onClick={showPoints}>show points</button>
         </>
     )
 }
